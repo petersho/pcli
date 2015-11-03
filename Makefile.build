@@ -1,0 +1,5 @@
+include config.mk
+
+all: 
+	gcc -Wall -g -c console.c -o console.o
+	gcc -g -o pcli console.o -lcurses -L./cmdlib $(LIB_LIST)
